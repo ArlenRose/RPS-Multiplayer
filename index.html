@@ -9,13 +9,16 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!--  Firebase  -------------------------------------------------------------->
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <!--<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>-->
   <!--  Jquery  ---------------------------------------------------------------->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!--  Font  ------------------------------------------------------------------>
   <link rel="stylesheet" href="https://use.typekit.net/kzu6paa.css">
   <!--  MomentJs  -------------------------------------------------------------->
   <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
-  
+
 </head>
 
 <!--  Header  ------------------------------------------------------------------------>
@@ -31,7 +34,7 @@
       <h5><strong>Train Scheduler</strong></h5>
     </div>
     <div class="card-body">
-      <table class="table table-striped">
+      <table id="full-member-list" class="table table-striped">
         <thead>
           <tr>
             <th scope="col">Train Name</th>
@@ -42,7 +45,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!--<tr>
             <th scope="col">-</th>
             <th scope="col">-</th>
             <th scope="col">-</th>
@@ -62,35 +65,8 @@
             <th scope="col">-</th>
             <th scope="col">-</th>
             <th scope="col">-</th>
-          </tr>
-          <tr>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-          </tr>
-          <tr>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-          </tr>
-          <tr>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-          </tr>
-          <tr>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-            <th scope="col">-</th>
-          </tr>
+          </tr>-->
+          </tbody>
       </table>
     </div>
   </div>
@@ -104,7 +80,7 @@
     <div class="card-body">
       <form>
         <div class="form-group">
-          <label for="employeeName">Train Name</label>
+          <label for="trainName">Train Name</label>
           <input type="Train Name" class="form-control" id="train-name" placeholder="So tell me about this train...">
         </div>
         <div class="form-group">
