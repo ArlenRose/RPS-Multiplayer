@@ -26,14 +26,31 @@ $("button").on("click", function () {
   })
 
   database.ref().on("child_added", function(childSnapshot) {
-  console.log(childSnapshot.val())
+  console.log(childSnapshot.val());
+
+var now = new moment();
+var firstTrain = childSnapshot.val().startDate;
+var frequency = childSnapshot.val().frequency;
+var possibleNextTrain = moment(firstTrain,"HH:mm");
+possibleNextTrain.set
+console.log(possibleNextTrain);
+console.log(possibleNextTrain.diff(now));
+
+while(possibleNextTrain.diff(now) < 0){
+  possibleNextTrain.add(frequency,"minutes");
+}
+
+var nextTrain = []
+
+
+
 
     $("#full-member-list").append("<tr class='newTrain'> <th class='trainName'> " +
       childSnapshot.val().trainName +
       " </th><th class='destination'> " + childSnapshot.val().destination +
-      " </th><th class='startDate'> " + childSnapshot.val().startDate +
-      " </th><th class='frequency'> " + childSnapshot.val().frequency +
-      " </th><th class='frequency'> " + childSnapshot.val().frequency +
+      " </th><th class='startDate'> " + firstTrain +
+      " </th><th class='frequency'> " + frequency +
+      " </th><th class='frequency'> " + firstTrain +
       " </th></tr>");
 
     // Handle the errors
